@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senior Software Developer | Mantu Kumar - Sharma</title>
+    <meta name="description" content="Join SkillUp with Mantu for live workshops and self-paced courses in AI, software development, and ad technology.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:title" content="SkillUp with Mantu - AI & Tech Courses">
+    <meta property="og:description" content="Join SkillUp with Mantu for live workshops and self-paced courses in AI, software development, and ad technology.">
+    <meta property="og:image" content="https://example.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/">
+    <meta property="twitter:title" content="SkillUp with Mantu - AI & Tech Courses">
+    <meta property="twitter:description" content="Join SkillUp with Mantu for live workshops and self-paced courses in AI, software development, and ad technology.">
+    <meta property="twitter:image" content="https://example.com/assets/images/og-image.jpg">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* PARTICLES BACKGROUND */
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+
+        /* MAIN CARD */
+        .resume-wrapper {
+            padding: 40px 0;
+        }
+
+        .resume-card {
+            background: rgba(10, 15, 30, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow:
+                0 0 40px rgba(255, 0, 170, 0.12),
+                0 0 80px rgba(0, 212, 255, 0.08);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background:
+                linear-gradient(180deg,
+                    rgba(255, 0, 170, 0.15),
+                    rgba(0, 212, 255, 0.08));
+
+            padding: 40px 30px;
+
+            height: 100%;
+
+            border-right:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+
+            border-radius: 50%;
+
+            margin: auto;
+
+            background:
+                linear-gradient(135deg,
+                    #ff0080,
+                    #6d5dfc,
+                    #00d4ff);
+
+            padding: 5px;
+
+            box-shadow:
+                0 0 30px rgba(255, 0, 170, 0.35);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-top: 25px;
+        }
+
+        .designation {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            color: #cbd5e1;
+        }
+
+        .contact-item i {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(135deg,
+                    #ff0080,
+                    #6d5dfc);
+
+            color: white;
+        }
+
+        /* SOCIAL */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .social-btn {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            color: white;
+
+            transition: 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform:
+                translateY(-5px) scale(1.05);
+        }
+
+        .linkedin {
+            background: #0A66C2;
+        }
+
+        .github {
+            background: #24292e;
+        }
+
+        .facebook {
+            background: #1877F2;
+        }
+
+        .twitter {
+            background: #000;
+        }
+
+        .instagram {
+            background:
+                linear-gradient(45deg,
+                    #f9ce34,
+                    #ee2a7b,
+                    #6228d7);
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 40px;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            background:
+                linear-gradient(90deg,
+                    #ff0080,
+                    #6d5dfc,
+                    #00d4ff);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .summary {
+            color: #cbd5e1;
+            line-height: 1.9;
+            margin-bottom: 40px;
+        }
+
+        /* SECTION */
+        .resume-section {
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -8px;
+
+            width: 60%;
+            height: 4px;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(90deg,
+                    #ff0080,
+                    #00d4ff);
+        }
+
+        /* EXPERIENCE CARD */
+        .exp-card {
+            background: rgba(255, 255, 255, 0.03);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 24px;
+
+            padding: 25px;
+
+            margin-bottom: 25px;
+
+            transition: 0.35s ease;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(255, 0, 170, 0.4);
+
+            box-shadow:
+                0 0 30px rgba(255, 0, 170, 0.15);
+        }
+
+        .exp-card h5 {
+            font-weight: 700;
+        }
+
+        .exp-meta {
+            color: #00d4ff;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .exp-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        /* SKILLS */
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-chip {
+            padding: 12px 18px;
+
+            border-radius: 999px;
+
+            background:
+                linear-gradient(135deg,
+                    rgba(255, 0, 170, 0.18),
+                    rgba(0, 212, 255, 0.12));
+
+            border:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .skill-chip:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 0 25px rgba(0, 212, 255, 0.18);
+        }
+
+        /* MOBILE */
+        @media (max-width: 992px) {
+            .sidebar {
+                border-right: none;
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .name {
+                font-size: 1.7rem;
+            }
+
+            .content {
+                padding: 24px;
+            }
+
+            .sidebar {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+    <div id="particles-js"></div>
+
+    <div class="container resume-wrapper">
+        <div class="resume-card">
+            <div class="row g-0">
+
+                <!-- SIDEBAR -->
+                <div class="col-lg-4">
+                    <div class="sidebar text-center">
+
+                        <div class="profile-img">
+                            <img src="https://i.pravatar.cc/300" alt="Profile" />
+                        </div>
+
+                        <h2 class="name">
+                            Mr. Mantu Kumar
+                        </h2>
+
+                        <p class="designation">
+                            Software Developer | Obsessions
+                        </p>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            
+                               <a href="mailto:developer.mantu@gmail.com" style="color: #fff;"><span>developer.mantu@gmail.com</span></a> 
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>
+                               
+                                <a href="tel: +91-9560628122" style="color: #fff;"><span> +91-9560628122</span></a> 
+                            </span>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span style="color: #fff;">
+                                New Delhi, India
+                            </span>
+                        </div>
+
+                        <!-- SOCIAL -->
+                        <div class="social-links justify-content-center">
+                            <a href="https://www.linkedin.com/in/mantu-sharma" target="_blank"
+                                class="social-btn linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                            <a href="https://github.com/thisismantu" target="_blank" class="social-btn github">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/thisismantu" target="_blank" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://x.com/thisismantu" target="_blank" class="social-btn twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/thisismantu" target="_blank"
+                                class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT -->
+                <div class="col-lg-8">
+                    <div class="content">
+
+                        <h3 class="hero-title">
+                            Experience with <span>Software Development</span>: 8+ years of experience working with Node.js,
+                            Express.js, React.js, Laravel, and MySQL.<br>
+                            Professional Team <span>Handling</span>. </h3>
+
+                        <p class="summary">
+                            Professional Backend Developer with expertise in
+                            TypeScript, Express.js, Sequelize ORM, Swagger,
+                            MySQL, and enterprise-grade API infrastructure.
+                            Specialized in high-performance backend systems,
+                            scalable architecture, and cloud-ready solutions.
+                        </p>
+
+                        <!-- EXPERIENCE -->
+                        <div class="resume-section">
+                            <h3 class="section-title">
+                                Experience
+                            </h3>
+
+                            <div class="exp-card">
+                                <h5>
+                                    Senior Software Developer
+                                </h5>
+
+                                <div class="exp-meta">
+                                    Envogue Furnishings India Pvt. Ltd. • 2021 - Present
+                                </div>
+
+                                <p>
+                                    Designed scalable REST APIs using
+                                    TypeScript and Express.js with Swagger
+                                    documentation and Sequelize ORM.
+                                    Optimized backend architecture for
+                                    enterprise applications.
+                                </p>
+                                
+                            </div>
+
+                            <div class="exp-card">
+                                <h5>
+                                    Software Developer
+                                </h5>
+
+                                <div class="exp-meta">
+                                    Trendy Deals ECommerce Pvt. Ltd. • 2017 - 2021
+                                </div>
+
+                                <p>
+                                    Built modern web applications and backend
+                                    systems with Node.js, MySQL, and React.
+                                    Improved API response performance and
+                                    database optimization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- SKILLS -->
+                        <div class="resume-section">
+
+                            <h3 class="section-title">
+                                Technical Skills
+                            </h3>
+
+                            <div class="skills-wrap">
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#3178c6,#1e3a8a);color:#fff;">
+                                    TypeScript
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#ff2d20,#ff6b6b);color:#fff;">
+                                    Laravel
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#68a063,#3c873a);color:#fff;">
+                                    Node.js
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#000,#444);color:#fff;">
+                                    Express.js
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#399afc,#005bea);color:#fff;">
+                                    Sequelize ORM
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#00758f,#f29111);color:#fff;">
+                                    MySQL
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#85ea2d,#4ac29a);color:#000;">
+                                    Swagger Docs
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#7f00ff,#e100ff);color:#fff;">
+                                    JWT Authentication
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#00c6ff,#0072ff);color:#fff;">
+                                    REST APIs
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#563d7c,#7952b3);color:#fff;">
+                                    Bootstrap
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#f7df1e,#f0db4f);color:#000;">
+                                    JavaScript ES6+
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#ff9800,#ff5722);color:#fff;">
+                                    jQuery
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#36d1dc,#5b86e5);color:#fff;">
+                                    Razorpay Integration
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#00b09b,#96c93d);color:#fff;">
+                                    Payment Gateway APIs
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#ff416c,#ff4b2b);color:#fff;">
+                                    OAuth 2.0
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#4776e6,#8e54e9);color:#fff;">
+                                    Passport.js
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#232526,#414345);color:#fff;">
+                                    Git & GitHub
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#ff0080,#7928ca);color:#fff;">
+                                    WhatsApp APIs
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#0cebeb,#20e3b2,#29ffc6);color:#000;">
+                                    SMTP & Email Services
+                                </div>
+
+                                <div class="skill-chip"
+                                    style="background:linear-gradient(135deg,#fc4a1a,#f7b733);color:#fff;">
+                                    Cloud Integrations
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- PROJECTS -->
+                        <div class="resume-section">
+
+                            <h3 class="section-title">
+                                Featured Projects
+                            </h3>
+
+                            <div class="exp-card">
+
+                                <h5>
+                                    Obsessions Retail Platform
+                                </h5>
+
+                                <div class="exp-meta">
+                                    B2C E-Commerce Platform
+                                </div>
+
+                                <p>
+                                    Developed a high-performance B2C e-commerce platform with secure payment
+                                    integration, advanced product filtering, order management, real-time tracking,
+                                    customer authentication, and scalable REST APIs using TypeScript, Express.js, and
+                                    MySQL.
+                                </p>
+
+                            </div>
+
+                            <div class="exp-card">
+
+                                <h5>
+                                    Obsessions B2B Portal
+                                </h5>
+
+                                <div class="exp-meta">
+                                    Enterprise Wholesale Solution
+                                </div>
+
+                                <p>
+                                    Built a complete B2B ordering platform with custom pricing modules, bulk ordering
+                                    workflows, vendor dashboards, authentication systems, inventory management, and
+                                    scalable API architecture.
+                                </p>
+
+                            </div>
+
+                            <div class="exp-card">
+
+                                <h5>
+                                    Go India Facilitator
+                                </h5>
+
+                                <div class="exp-meta">
+                                    Travel & Tour Services Platform
+                                </div>
+
+                                <p>
+                                    Designed and developed a professional business facilitation portal supporting online
+                                    registration, travel documentation, trade licensing services, and enterprise
+                                    integrations.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- EDUCATION -->
+                        <div class="resume-section">
+                            <h3 class="section-title">
+                                Education
+                            </h3>
+
+                            <div class="exp-card">
+                                <h5>
+                                    Bachelor of Computer Science
+                                </h5>
+
+                                <div class="exp-meta">
+                                    Sai Nath University, Ranchi • 2011 - 2015
+                                </div>
+
+                                <p>
+                                    Specialized in software engineering,
+                                    databases, distributed systems,
+                                    and backend architecture.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80
+                },
+
+                color: {
+                    value: "#ff00aa"
+                },
+
+                shape: {
+                    type: "circle"
+                },
+
+                opacity: {
+                    value: 0.5
+                },
+
+                size: {
+                    value: 3
+                },
+
+                line_linked: {
+                    enable: true,
+                    color: "#00d4ff"
+                },
+
+                move: {
+                    enable: true,
+                    speed: 2
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
